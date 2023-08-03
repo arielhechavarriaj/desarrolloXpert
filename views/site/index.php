@@ -2,52 +2,72 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'My Yii Application';
+$this->title = 'DevXpert';
 ?>
-<div class="site-index">
+<div class="site-index text-light">
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
-        <h1 class="display-4">Congratulations!</h1>
+    <div class=" text-center bg-transparent m-5 ">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <h1 class=" animated-text text-info">DevXpert!</h1>
 
-        <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
+        <p class="lead">Evalúa y mejora tus habilidades en diversos lenguajes y frameworks de programación.</p>
+        <p><a class="btn btn-lg btn-outline-light " href="https://www.yiiframework.com">Comenzar!</a></p>
     </div>
 
-    <div class="body-content">
+    <div class="container-fluid ">
 
-        <div class="row">
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
+        <div class="row  justify-content-center  ">
+            <div class=" col-lg-5  shadow-lg card bg-transparent text-light border-end-0 border-start-0  border-white mx-1">
+                <h2 class="text-center text-light">Misión</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>En DevXpert, nuestra misión es proporcionarte una plataforma de evaluación interactiva que te permita medir tus conocimientos en diferentes lenguajes de programación y frameworks. Te ayudaremos a mejorar tus habilidades y estar preparado para el éxito en tu carrera como desarrollador.</p>
 
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+
             </div>
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
+            <div class=" col-lg-5  shadow-lg card bg-transparent text-light border-end-0 border-start-0 border-white">
+                <h2 class="text-center text-light">Visión</h2>
+                <p>Nuestra visión es ser la plataforma líder en la evaluación y mejora de habilidades en el ámbito de la programación. Queremos ser la primera opción para aquellos que buscan demostrar sus conocimientos y avanzar en su camino como expertos en desarrollo de software.</p>
+              </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
         </div>
 
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,8 +8,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
-use yii\bootstrap5\BootstrapIconAsset;
-
+use aki\vue\Vue;
 AppAsset::register($this);
 
 $this->registerCsrfMetaTags();
@@ -19,7 +18,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/images/logo.ico')]);
 ?>
-<?php $this->beginPage() ?>
+<?php
+$this->beginPage();
+
+?>
 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
@@ -30,55 +32,57 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <body class="d-flex flex-column h-100 background">
 <?php $this->beginBody() ?>
 
-<header id="header">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => ' shadow-lg navbar-expand-md navbar-dark  fixed-top']
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav  '],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest
-                ? ['label' => 'Login', 'url' => ['/site/login']]
-                : '<li class="nav-item">'
-                . Html::beginForm(['/site/logout'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'nav-link btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-        ]
-    ]);
-    NavBar::end();
-    ?>
-</header>
-
-<main id="app" class="flex-shrink-0" role="main">
-    <div class="container">
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-        <?php endif ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
-
-<footer-ui></footer-ui>
-<footer id="footer" class="mt-auto py-3  ">
-    <div class="container shadow-lg">
-        <div class="row text-muted text-light">
-            <div class="col-md-6 text-center text-md-start text-light">&copy; LeiraStudio <?= date('Y') ?></div>
-        </div>
-    </div>
-</footer>
-
+<!--<header id="header">-->
+<!--    --><?php
+//    NavBar::begin([
+//        'brandLabel' => Yii::$app->name,
+//        'brandUrl' => Yii::$app->homeUrl,
+//        'options' => ['class' => ' shadow-lg navbar-expand-md navbar-dark  fixed-top']
+//    ]);
+//    echo Nav::widget([
+//        'options' => ['class' => 'navbar-nav  '],
+//        'items' => [
+//            ['label' => 'Home', 'url' => ['/site/index']],
+//            ['label' => 'About', 'url' => ['/site/about']],
+//            ['label' => 'Contact', 'url' => ['/site/contact']],
+//            Yii::$app->user->isGuest
+//                ? ['label' => 'Login', 'url' => ['/site/login']]
+//                : '<li class="nav-item">'
+//                . Html::beginForm(['/site/logout'])
+//                . Html::submitButton(
+//                    'Logout (' . Yii::$app->user->identity->username . ')',
+//                    ['class' => 'nav-link btn btn-link logout']
+//                )
+//                . Html::endForm()
+//                . '</li>'
+//        ]
+//    ]);
+//    NavBar::end();
+//    ?>
+<!--</header>-->
+<!---->
+<!--<main id="main" class="flex-shrink-0" role="main">-->
+<!--    <div class="container">-->
+<!--        --><?php //if (!empty($this->params['breadcrumbs'])): ?>
+<!--            --><?php //= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+<!--        --><?php //endif ?>
+<!--        --><?php //= Alert::widget() ?>
+<!--        --><?php //= $content ?>
+<!--    </div>-->
+<!--</main>-->
+<!---->
+<!---->
+<!---->
+<!--<footer id="footer" class="mt-auto py-3  ">-->
+<!--    <div class="container shadow-lg">-->
+<!--        <div class="row text-muted text-light">-->
+<!--            <div class="col-md-6 text-center text-md-start text-light">&copy; LeiraStudio --><?php //= date('Y') ?><!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+<div id="app"></div>
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

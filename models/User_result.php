@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use SebastianBergmann\CodeCoverage\Report\Xml\Tests;
 use Yii;
 
 /**
@@ -14,7 +15,7 @@ use Yii;
  * @property string|null $results
  *
  * @property Tests $test
- * @property Users $user
+ * @property User $user
  */
 class User_result extends \yii\db\ActiveRecord
 {

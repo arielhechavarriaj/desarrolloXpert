@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use SebastianBergmann\CodeCoverage\Report\Xml\Tests;
 use Yii;
 
 /**
